@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center h-screen w-full">
         <form className='flex flex-col gap-2 shadow-2xl bg-amber-50 p-10 '>
-           <label> Email</label>
+           <label> Email Address</label>
             <input type="text" placeholder='enter your email' className='p-4 border-2'/>
             
             <label>Password</label>
