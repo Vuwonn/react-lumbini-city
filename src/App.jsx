@@ -5,6 +5,7 @@ import TestState from './TestState'
 import Layout from './Layout'
 import Login from './Login'
 import Register from './Register'
+import DbProduct from './DbProduct'
 const App = () => {
   return (
      <BrowserRouter>
@@ -13,10 +14,11 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="about" element={<Recepie />} />
         <Route path="contact" element={<TestState />} />
+        <Route path ="ourproduct" element={<DbProduct/>}/>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-
         </Route>
+
       </Routes>
    </BrowserRouter>
   )
