@@ -18,7 +18,7 @@ const Apicard = ({ products }) => {
 
       {/* Content */}
       <div className="p-5 flex flex-col gap-3">
-        <h2 className="text-xl font-bold text-gray-800 line-clamp-1">
+        <h2 className="text-2xl font-extrabold text-gray-800 line-clamp-1">
           {products.title}
         </h2>
 
