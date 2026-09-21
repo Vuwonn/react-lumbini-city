@@ -33,7 +33,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar name={name}/>
       <Hero/>
 
       <TestState/>
