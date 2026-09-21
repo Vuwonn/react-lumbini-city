@@ -1,8 +1,9 @@
 import { Link } from "react-router"
 import "./App.css"
+import Contact from "./pages/Contact"
 const Navbar = ({name}) => {
   return (
-    <div className="text-red-900 flex  bg-green-500  p-5  justify-around h-14 w-full  text-2xl fixed z-10 items-center" >
+    <div className="text-red-900 flex  bg-green-500  p-5  justify-around h-14 w-full  text-2xl z-10 items-center" >
         <div>
           LOGO HO YO
         </div>
