@@ -6,6 +6,7 @@ import Layout from './Layout'
 import Login from './Login'
 import Register from './Register'
 import DbProduct from './DbProduct'
+import Products from './Products'
 const App = () => {
   return (
      <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => {
         <Route path ="ourproduct" element={<DbProduct/>}/>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="users/:id" element={<Products/>}/>
         </Route>
 
       </Routes>
