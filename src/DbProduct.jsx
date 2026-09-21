@@ -1,39 +1,64 @@
-import axios from "axios"
-import {  useEffect, useState} from "react"
-import DbProductCard from "./DbProductCard"
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+
 const DbProduct = () => {
-    const[data,setData]=useState([])
+    const [data, setData] = useState([])
 
-
-    const fetchData = async()=>{
+    const fetchdata = async () => {
         try {
-            const res = await axios.get("http://localhost:8000/get-product")
-           setData(res.data.data)
-            
+            const res = await axios.get('https://dummyjson.com/users')
+            setData(res.data.users)
         } catch (error) {
             console.log(error)
-            
         }
-
     }
-useEffect(()=>{
-fetchData()
-},[])
 
+    useEffect(() => {
+        fetchdata()
+    }, [])
 
-  return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
+    return (
+        <div className="min-h-screen bg-slate-100 p-6">
 
-{
-    data.map((value)=>{
-        return(
-            <DbProductCard products={value} key={value._id} />
-        )
+            <h1 className="text-2xl font-bold text-center mb-6">
+                User Details
+            </h1>
 
-    })
-}
-    </div>
-  )
+            <div className="max-w-5xl mx-auto bg-white rounded-lg shadow overflow-hidden">
+
+                <table className="w-full border-collapse">
+
+                    <thead>
+                        <tr className="bg-blue-600 text-white">
+                            <th className="p-3 text-left">First Name</th>
+                            <th className="p-3 text-left">Last Name</th>
+                            <th className="p-3 text-left">Maiden Name</th>
+                            <th className="p-3 text-left">Age</th>
+                            <th className="p-3 text-left">Gender</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {data.map((value) => (
+                            <tr
+                                key={value.id}
+                                className="border-b hover:bg-slate-100"
+                            >
+                                <td className="p-3">{value.firstName}</td>
+                                <td className="p-3">{value.lastName}</td>
+                                <td className="p-3">{value.maidenName}</td>
+                                <td className="p-3">{value.age}</td>
+                                <td className="p-3 capitalize">{value.gender}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    )
 }
 
 export default DbProduct
+
