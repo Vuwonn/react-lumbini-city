@@ -23,7 +23,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="text-white flex bg-gray-900 px-8 h-16 w-full fixed z-10 items-center justify-between shadow-lg">
+    <div className="text-white flex bg-gray-900 px-8 h-16 w-full  z-10 items-center justify-between shadow-lg">
       {/* LOGO */}
       <div className="text-2xl font-bold">LOGO HO YO</div>
 

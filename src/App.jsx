@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./Home";
 import Recepie from "./Recepie";
-import TestState from "./TestState";
 import Layout from "./Layout";
 import Login from "./Login";
 import Register from "./Register";
@@ -9,6 +8,7 @@ import DbProduct from "./DbProduct";
 import Khanabitra from "./Khanabitra";
 import KhanaCard from "./KhanaCard";
 import Addcard from "./Addcard";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
 
           <Route path="about" element={<Recepie />} />
 
-          <Route path="contact" element={<TestState />} />
+          <Route path="contact" element={<Contact />} />
 
           <Route path="ourproduct" element={<DbProduct />} />
 
