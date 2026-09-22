@@ -57,62 +57,26 @@ const Register = () => {
 
   return (
     <div className="flex justify-center items-center h-screen w-full">
-      <form
-        className="flex flex-col gap-2 shadow-2xl bg-amber-50 p-10 "
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <label> Email</label>
-        <input
-          type="text"
-          placeholder="enter your email"
-          className="p-4 border-2"
-          {...register("email")}
-        />
-        {errors.email?.message && (
-          <p className="text-red-500  text-sm">{errors.email?.message}</p>
-        )}
+        <form className='flex flex-col gap-2 shadow-2xl bg-amber-50 p-10 w-[30%]' onSubmit={handleSubmit(onSubmit)}>
+           <label> Email</label>
+            <input type="text" placeholder='enter your email' className='p-4 border-2 rounded border-gray-500 outline-none' {...register("email")} />
+             {errors.email?.message && <p className='text-red-500  text-sm'>{errors.email?.message}</p>}
+            
+            <label>FullName</label>
+            <input type="text" placeholder='enter your FullName' className='p-4 border-2 rounded border-gray-500 outline-none' {...register("fullName")}/>
+            {errors.fullName?.message && <p className='text-red-500  text-sm'>{errors.fullName?.message}</p>}
 
-        <label>FullName</label>
-        <input
-          type="text"
-          placeholder="enter your FullName"
-          className="p-4 border-2"
-          {...register("fullName")}
-        />
-        {errors.fullName?.message && (
-          <p className="text-red-500  text-sm">{errors.fullName?.message}</p>
-        )}
+            <label>Address</label>
+            <input type="text" placeholder='enter your Address' className='p-4 border-2 rounded border-gray-500 outline-none'{...register("address")} />
+            {errors.address?.message && <p className='text-red-500  text-sm'>{errors.address?.message}</p>}
 
-        <label>Address</label>
-        <input
-          type="text"
-          placeholder="enter your Address"
-          className="p-4 border-2"
-          {...register("address")}
-        />
-        {errors.address?.message && (
-          <p className="text-red-500  text-sm">{errors.address?.message}</p>
-        )}
-
-        <label> Phone Number</label>
-        <input
-          type="text"
-          placeholder="enter your Number"
-          className="p-4 border-2"
-          {...register("phone")}
-        />
-        {errors.phone?.message && (
-          <p className="text-red-500  text-sm">{errors.phone?.message}</p>
-        )}
-        <div>
-          {" "}
-          <button type="submit" className="bg-blue-600  p-4 ">
-            {" "}
-            Register
-          </button>
-          <Link to="/login">Login</Link>{" "}
-        </div>
-      </form>
+            <label> Phone Number</label>
+            <input type="text" placeholder='enter your Number' className='p-4 border-2 rounded border-gray-500 outline-none' {...register("phone")}/>
+            {errors.phone?.message && <p className='text-red-500  text-sm'>{errors.phone?.message}</p>}
+          <div className='flex gap-4 items-center'>  <button type='submit' className="bg-blue-600  p-4 cursor-pointer rounded"> Register</button>
+            <Link to="/login" ><button className='border py-4 px-4 rounded cursor-pointer'>Login</button></Link> </div>
+           
+        </form>
     </div>
   );
 };
