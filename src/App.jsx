@@ -9,6 +9,7 @@ import Khanabitra from "./Khanabitra";
 import KhanaCard from "./KhanaCard";
 import Addcard from "./Addcard";
 import Contact from "./pages/Contact";
+// import Tester from "./Tester";
 
 const App = () => {
   return (
@@ -32,6 +33,8 @@ const App = () => {
           <Route path="login" element={<Login />} />
 
           <Route path="register" element={<Register />} />
+
+          {/* <Route path="tester" element={<Tester />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
