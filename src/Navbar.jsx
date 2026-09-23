@@ -8,7 +8,6 @@ const Navbar = () => {
 
   const updateCartCount = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
     setCartCount(cart.length);
   };
 
@@ -23,11 +22,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="text-white flex bg-gray-900 px-8 h-16 w-full  z-10 items-center justify-between shadow-lg">
+    <div className="text-white flex bg-gray-900 px-8 h-16 w-full z-10 items-center justify-between shadow-lg">
       {/* LOGO */}
       <div className="text-2xl font-bold">LOGO HO YO</div>
 
-      {/* NAVIGATION */}
       <div className="flex gap-8 items-center">
         <Link to="/" className="hover:text-yellow-400 transition">
           Home
@@ -44,6 +42,10 @@ const Navbar = () => {
         <Link to="/ourproduct" className="hover:text-yellow-400 transition">
           Our Products
         </Link>
+
+        {/* <Link to="/tester" className="hover:text-yellow-400 transition">
+          Test
+        </Link> */}
 
         {/* CART ICON */}
         <Link
