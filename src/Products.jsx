@@ -66,8 +66,8 @@ const Products = () => {
           <div className="flex justify-center">
 
             <img
-              src={data.image}
-              alt={data.firstName}
+              src={data?.image}
+              alt={data?.firstName}
               className="w-64 h-64 rounded-lg object-cover"
             />
 
@@ -83,7 +83,7 @@ const Products = () => {
               </p>
 
               <h1 className="text-2xl font-bold">
-                {data.firstName} {data.lastName}
+                {data?.firstName} {data?.lastName}
               </h1>
             </div>
 
@@ -94,7 +94,7 @@ const Products = () => {
               </p>
 
               <p className="font-semibold">
-                {data.maidenName}
+                {data?.maidenName}
               </p>
             </div>
 
@@ -105,7 +105,7 @@ const Products = () => {
               </p>
 
               <p className="font-semibold">
-                {data.age}
+                {data?.age}
               </p>
             </div>
 
@@ -116,7 +116,7 @@ const Products = () => {
               </p>
 
               <p className="font-semibold capitalize">
-                {data.gender}
+                {data?.gender}
               </p>
             </div>
 
@@ -127,7 +127,7 @@ const Products = () => {
               </p>
 
               <p className="font-semibold">
-                {data.email}
+                {data?.email}
               </p>
             </div>
 

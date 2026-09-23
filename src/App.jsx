@@ -9,7 +9,7 @@ import DbProduct from './DbProduct'
 import Products from './Products'
 const App = () => {
   return (
-     <BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout/>} >
         <Route index element={<Home />} />
@@ -20,10 +20,9 @@ const App = () => {
         <Route path="register" element={<Register />} />
         <Route path="users/:id" element={<Products/>}/>
         </Route>
-
       </Routes>
-   </BrowserRouter>
-  )
-}
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;

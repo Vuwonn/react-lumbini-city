@@ -1,13 +1,27 @@
+import React from "react";
+import { Link } from "react-router";
 
-const KhanaCard = ({khana}) => {
+const KhanaCard = ({ khana }) => {
   return (
-    <div className="group w-72 overflow-hidden rounded-2xl bg-white shadow-lg border border-gray-200 transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-orange-400">
-      <img src={khana.image} alt="" />
-      <p>{khana.name}</p>
-      <p>{khana.caloriesPerServing}</p>
-      <p>{khana.rating}</p>
-    </div>
-  )
-}
+    <div className="rounded-xl bg-white p-4 shadow-md">
+      <img
+        src={khana.image}
+        alt={khana.name}
+        className="h-48 w-full rounded-lg object-cover"
+      />
 
-export default KhanaCard
+      <h2 className="mt-3 text-xl font-bold">{khana.name}</h2>
+
+      <p className="mt-2 text-gray-600">Cuisine: {khana.cuisine}</p>
+
+      <Link
+        to={`/khanabitra/${khana.id}`}
+        className="mt-4 inline-block rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700"
+      >
+        View Details
+      </Link>
+    </div>
+  );
+};
+
+export default KhanaCard;
